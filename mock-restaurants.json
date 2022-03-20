@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Claro",
+    "image": "https://i.ibb.co/Ykg2QZc/claro.jpg",
+    "chef": "62319bd95cde0ce3c7ea4e85"
+  },
+  {
+    "name": "Lumina",
+    "image": "https://i.ibb.co/KbkdXR8/mizlala-gret-mullet-fillet.jpg",
+    "chef": "62319bd95cde0ce3c7ea4e86"
+  },
+  {
+    "name": "Tiger Lilly",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e87"
+  },
+  {
+    "name": "Kab Kem",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e85"
+  },
+  {
+    "name": "Popina",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e86"
+  },
+  {
+    "name": "Onza",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e88"
+  },
+  {
+    "name": "Kitchen Market",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e88"
+  },
+  {
+    "name": "Mashya",
+    "image": "https://i.ibb.co/TmNKDSs/tiger-lili.png",
+    "chef": "62319bd95cde0ce3c7ea4e88"
+  }
+]

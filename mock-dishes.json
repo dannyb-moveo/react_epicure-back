@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Pad Ki Mao",
+    "price": "88",
+    "image": "https://i.ibb.co/JnPTs6X/rectangle.png",
+    "ingredients": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
+    "tags": "spicy",
+    "restaurant": "62319cb2c71217bf770f9b0d"
+  },
+  {
+    "name": "Garbanzo Frito",
+    "price": "98",
+    "image": "https://i.ibb.co/whs3KG4/rectangle2.png",
+    "ingredients": "Polenta fingers, veal cheek,magic chili cured lemon cream, yellow laksa",
+    "tags": "vegan",
+    "restaurant": "62319cb2c71217bf770f9b0e"
+  },
+  {
+    "name": "Smoked Pizza",
+    "price": "65",
+    "image": "https://i.ibb.co/q9vDjvq/rectangle3.png",
+    "ingredients": "Basil dough, cashew 'butter', demi-glace, bison & radish",
+    "tags": "vegetarian",
+    "restaurant": "62319cb2c71217bf770f9b0f"
+  }
+]
