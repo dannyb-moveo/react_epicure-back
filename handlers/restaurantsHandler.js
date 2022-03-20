@@ -6,7 +6,9 @@ const handleCreateRestaurant = async (name, image, chef) => {
 };
 
 const handleGetAllRestaurants = async () => {
-  const restaurants = await Restaurant.find({}).populate("chef", "name");
+  const restaurants = await Restaurant.find({})
+    .populate("chef", "name")
+    .populate("signatureDish");
   return restaurants;
 };
 

@@ -13,8 +13,17 @@ const RestaurantSchema = new mongoose.Schema(
     },
     chef: {
       type: mongoose.Types.ObjectId,
-      required: [true, "please provide chef"],
+      required: [true, "Please provide chef"],
       ref: "Chef",
+    },
+    signatureDish: {
+      type: mongoose.Types.ObjectId,
+      required: [true, "Please provide signature dish"],
+      ref: "Dish",
+    },
+    isPopular: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true }

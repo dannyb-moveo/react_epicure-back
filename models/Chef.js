@@ -15,6 +15,10 @@ const ChefSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide chef description"],
     },
+    isChefOfTheWeek: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
