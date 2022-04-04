@@ -5,6 +5,7 @@ dotenv.config();
 import "express-async-errors";
 import morgan from "morgan";
 import cors from "cors";
+import { generateUploadURL } from "./s3.js";
 
 //connect db
 import connectDB from "./db/connect.js";
@@ -25,6 +26,11 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api", apiRouter);
+
+app.get("/s3Url", async (req, res) => {
+  const url = await generateUploadURL();
+  res.send({ url });
+});
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);

@@ -27,10 +27,16 @@ const handleDeleteDish = async (dishId) => {
   return dish;
 };
 
+const handleGetRestaurantsDishes = async (restaurantId) => {
+  const dishes = await Dish.find({ restaurant: restaurantId });
+  return dishes;
+};
+
 export {
   handleCreateDish,
   handleGetAllDishes,
   handleGetSingleDish,
   handleUpdateDish,
   handleDeleteDish,
+  handleGetRestaurantsDishes,
 };

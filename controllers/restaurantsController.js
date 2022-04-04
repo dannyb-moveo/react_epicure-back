@@ -34,8 +34,9 @@ const getSingleRestaurant = async (req, res) => {
 };
 const updateRestaurant = async (req, res) => {
   const { id: restaurantId } = req.params;
-  const { name, image, chef, signatureDish } = req.body;
-  if (!name || !image || !chef || !signatureDish) {
+  // signaturedish check?
+  const { name, image, chef } = req.body;
+  if (!name || !image || !chef) {
     throw new BadRequestError("Please provide all values");
   }
   const restaurant = await handleUpdateRestaurant(restaurantId, req.body);

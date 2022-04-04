@@ -18,8 +18,9 @@ const RestaurantSchema = new mongoose.Schema(
     },
     signatureDish: {
       type: mongoose.Types.ObjectId,
-      required: [true, "Please provide signature dish"],
+      // required: [true, "Please provide signature dish"],
       ref: "Dish",
+      default: null,
     },
     isPopular: {
       type: Boolean,

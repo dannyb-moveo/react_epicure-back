@@ -6,6 +6,7 @@ import {
   handleGetSingleDish,
   handleUpdateDish,
   handleDeleteDish,
+  handleGetRestaurantsDishes,
 } from "../handlers/dishesHandler.js";
 
 const createDish = async (req, res) => {
@@ -64,4 +65,17 @@ const deleteDish = async (req, res) => {
   res.status(StatusCodes.OK).json({ msg: "Success! dish removed" });
 };
 
-export { createDish, getAllDishes, getSingleDish, updateDish, deleteDish };
+const getRestaurantsDishes = async (req, res) => {
+  const { id: restaurantId } = req.params;
+  const dishes = await handleGetRestaurantsDishes(restaurantId);
+  res.status(StatusCodes.OK).json({ dishes, totalDishes: dishes.length });
+};
+
+export {
+  createDish,
+  getAllDishes,
+  getSingleDish,
+  updateDish,
+  deleteDish,
+  getRestaurantsDishes,
+};
