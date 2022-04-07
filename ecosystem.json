@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "epicure-dannyb",
+      "script": "./server.js"
+    }
+  ],
+
+  "deploy": {
+    "staging": {
+      "key": "~/Downloads/epicure-dannyb.pem",
+      "user": "ubuntu",
+      "host": ["ec2-54-93-233-115.eu-central-1.compute.amazonaws.com"],
+      "ref": "origin/main",
+      "repo": "git@github.com:dannyb-moveo/react_epicure-back.git",
+      "path": "/home/ubuntu/Epicure-Server-pm2",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "mkdir -p logs && npm i && pm2 reload ecosystem.json --env staging",
+      "pre-deploy-local": "echo 'Deploying code to servers'",
+      "env": {
+        "NODE_ENV": "staging"
+      }
+    }
+  }
+}
