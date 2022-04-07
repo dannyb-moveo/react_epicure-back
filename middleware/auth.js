@@ -13,7 +13,10 @@ const auth = async (req, res, next) => {
 
   const authorizedUrl = "ec2-54-93-233-115.eu-central-1.compute.amazonaws.com";
 
-  if (req.get("host") === authorizedUrl && req.method === "GET") {
+  if (
+    (req.get("host") === authorizedUrl || req.hostname === authorizedUrl) &&
+    req.method === "GET"
+  ) {
     next();
   }
 
