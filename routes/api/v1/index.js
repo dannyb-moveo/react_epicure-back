@@ -9,10 +9,10 @@ import restaurantRouter from "./restaurantsRoutes.js";
 import searchRouter from "./searchRoutes.js";
 import authRouter from "./authRoutes.js";
 
-router.use("/chefs", authenticateUser, chefsRouter);
-router.use("/dishes", authenticateUser, dishesRouter);
-router.use("/restaurants", authenticateUser, restaurantRouter);
-router.use("/search", authenticateUser, searchRouter);
+router.use("/chefs", chefsRouter);
+router.use("/dishes", dishesRouter);
+router.use("/restaurants", restaurantRouter);
+router.use("/search", searchRouter);
 router.use("/auth", authRouter);
 
 export default router;

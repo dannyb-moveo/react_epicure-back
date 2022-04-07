@@ -9,7 +9,13 @@ import {
   deleteDish,
 } from "../../../controllers/dishesController.js";
 
-router.route("/").post(createDish).get(getAllDishes);
-router.route("/:id").get(getSingleDish).patch(updateDish).delete(deleteDish);
+import authenticateUser from "../../../middleware/auth.js";
+
+router.route("/").post(authenticateUser, createDish).get(getAllDishes);
+router
+  .route("/:id")
+  .get(getSingleDish)
+  .patch(authenticateUser, updateDish)
+  .delete(authenticateUser, deleteDish);
 
 export default router;

@@ -10,13 +10,17 @@ import {
 } from "../../../controllers/restaurantsController.js";
 
 import { getRestaurantsDishes } from "../../../controllers/dishesController.js";
+import authenticateUser from "../../../middleware/auth.js";
 
-router.route("/").post(createRestaurant).get(getAllRestaurants);
+router
+  .route("/")
+  .post(authenticateUser, createRestaurant)
+  .get(getAllRestaurants);
 router
   .route("/:id")
   .get(getSingleRestaurant)
-  .patch(updateRestaurant)
-  .delete(deleteRestaurant);
+  .patch(authenticateUser, updateRestaurant)
+  .delete(authenticateUser, deleteRestaurant);
 router.route("/:id/dishes").get(getRestaurantsDishes);
 
 export default router;
