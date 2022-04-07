@@ -13,7 +13,7 @@
       "host": ["ec2-54-93-233-115.eu-central-1.compute.amazonaws.com"],
       "ref": "origin/main",
       "repo": "git@github.com:dannyb-moveo/react_epicure-back.git",
-      "path": "/home/ubuntu/Epicure-Server-pm2",
+      "path": "/home/ubuntu/Epicure-Server",
       "ssh_options": "StrictHostKeyChecking=no",
       "post-deploy": "mkdir -p logs && npm i && pm2 reload ecosystem.json --env staging",
       "pre-deploy-local": "echo 'Deploying code to servers'",
