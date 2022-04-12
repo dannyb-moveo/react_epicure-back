@@ -1,0 +1,7 @@
+{
+  "name": "Epicure API documentation",
+  "version": "1.0.0",
+  "description": "Documentation for the REST API",
+  "title": "Custom apiDoc browser title",
+  "url": "http://ec2-54-93-233-115.eu-central-1.compute.amazonaws.com/api"
+}
